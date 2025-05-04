@@ -52,3 +52,16 @@ if (btnLogin) {
         }
     });
 }
+
+document.getElementById("btn-logar").addEventListener("click", function () {
+    try {
+        Swal.fire({
+            icon: 'error',
+            title: 'Erro!',
+            text: `Não dá para ter tudo ;(`
+        })
+    }
+    catch (error) {
+        console.log("Ocorreu um erro!", error)
+    }
+});

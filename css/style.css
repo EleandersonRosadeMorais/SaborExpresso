@@ -18,6 +18,7 @@ body {
     color: #212121;
     line-height: 1.4;
 }
+
 h2 {
     color: #e4002b;
     margin-bottom: 12px;
@@ -38,17 +39,17 @@ input[type="text"],
 input[type="number"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 5px; 
+    margin-bottom: 5px;
     border: 1px solid #ffcc80;
-    border-radius: 10px; 
-    font-size: 12px; 
+    border-radius: 10px;
+    font-size: 12px;
     background-color: #ffffff;
     transition: all 0.5s ease;
 }
 
 input[type="text"]:focus,
 input[type="number"]:focus {
-    border-color:  #e0a800;
+    border-color: #e0a800;
     box-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
     outline: none;
 }
@@ -67,16 +68,13 @@ button {
 }
 
 button:hover {
-    background-color:  #e0a800;
+    background-color: #e0a800;
     transform: scale(1.1);
 }
-a {
-    text-decoration: none;
-    color: black;
-  }
 
-.sobre-container{
+
+.sobre-container {
     line-height: 1.8;
     text-align: center;
     margin: 150px auto auto auto;
-  }
+}

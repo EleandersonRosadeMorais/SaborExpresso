@@ -132,3 +132,5 @@ document.getElementById("selecionar9").addEventListener("click", function () {
     enviarPedido(8);
 });
 
+
+
