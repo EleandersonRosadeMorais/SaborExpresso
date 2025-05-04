@@ -78,3 +78,8 @@ button:hover {
     text-align: center;
     margin: 150px auto auto auto;
 }
+
+a{
+    color: black;
+    text-decoration: none;
+}
