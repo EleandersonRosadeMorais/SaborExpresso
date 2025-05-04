@@ -8,7 +8,7 @@ html {
     align-items: center;
 }
 body{
-    background: linear-gradient(90deg, #ffc72c, #da291c);
+    background: linear-gradient(90deg, #FFEB3B,#E53935);
 }
 label {
     text-align: left;
@@ -19,7 +19,7 @@ label {
     max-width: 1200px;
     margin: 20px;
     border-radius: 25px;
-    background-color: #da291c;
+    background-color: #E53935;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,7 +31,7 @@ label {
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
     width: 60%;
-    background-color: #ffc72c;
+    background-color: #FFEB3B;
 }
 
 #textoCadastro-caixa {
@@ -51,11 +51,6 @@ label {
     margin-bottom: 15px;
 }
 
-#inputLogin-caixa input,
-#textoCadastro-caixa button {
-    margin-bottom: 10px;
-}
-
 #textoCadastro-caixa button {
     margin-top: 20px;
 }
@@ -63,4 +58,31 @@ label {
 #inputLogin-caixa input {
     padding: 10px;
     border-radius: 10px;
+}
+
+#inputLogin-caixa button {
+    background-color: #C62828;
+    margin-bottom: 10px;
+    color: white;
+}
+#inputLogin-caixa a button {
+    all: unset;
+    color: blue;
+    text-decoration: underline;
+}
+#inputLogin-caixa a button:hover {
+    all: unset;
+    cursor: pointer;
+}
+#textoCadastro-caixa button {
+    background-color: #FFEB3B;
+    margin-bottom: 10px;
+}
+
+#inputLogin-caixa button:hover {
+    background-color: #A91F1F;
+}
+
+#textoCadastro-caixa button:hover {
+    background-color: #E6B800;
 }

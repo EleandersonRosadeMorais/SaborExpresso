@@ -13,7 +13,7 @@ async function buscarPedidos() {
 const listarPedidosCaixa = document.getElementById("listar-pedidos-caixa");
 
 async function carregarPedidos() {
-    listarPedidosCaixa.innerHTML = "<p> Carregando pedidos...</p>";
+    listarPedidosCaixa.innerHTML = `<p class="mensagem"> Carregando pedidos...</p>`;
     try {
         const pedidos = await buscarPedidos();
         console.log(pedidos)
@@ -28,7 +28,7 @@ function renderizarPedidos(pedidos) {
     listarPedidosCaixa.innerHTML = "";
     let pedidoTotal = 0;
     if (pedidos.length === 0) {
-        listarPedidosCaixa.innerHTML = "<p> Nenhum pedido foi cadastrado ainda</p>";
+        listarPedidosCaixa.innerHTML = `<p class="mensagem"> Nenhum pedido foi cadastrado ainda</p>`;
         return;
     }
     for (let pedido of pedidos) {
@@ -41,13 +41,13 @@ function renderizarPedidos(pedidos) {
         const pedidoCaixa = document.createElement("div");
         pedidoCaixa.classList.add("pedido-renderizar");
         pedidoCaixa.innerHTML = `
-            <strong> Nome: </strong> ${pedido.nome} <br>
+            <h3>${pedido.nome}</h3> <br>
             <strong> Descrição: </strong> ${pedido.descricao} <br>
             <strong> Preço: </strong> ${converterReal(pedido.preco)} <br>
             <strong> Quantidade: </strong> ${pedido.quantidade} <br>
-             <strong> Preço total: </strong> ${converterReal(precoTotal())} <br>
-            <button class="deletar-botao" data-id="${pedido.id}"> Deletar </button>
-            <button class="editar-botao" data-id="${pedido.id}"> Editar </button> <br>
+            <strong> Preço total: </strong> ${converterReal(precoTotal())} <br>
+            <button class="editar-botao" data-id="${pedido.id}"> Editar </button>
+            <button class="deletar-botao" data-id="${pedido.id}"> Deletar </button> <br>
             <button class="aumentar-quantidade" data-id="${pedido.id}"> Aumentar 1 </button>
             <button class="diminuir-quantidade" data-id="${pedido.id}"> Diminuir 1 </button>
         `;
@@ -101,7 +101,11 @@ async function deletarPedido(numeroPedido) {
         Swal.fire({
             icon: 'error',
             title: 'Erro!',
-            text: `Ocorreu um erro ao deletar um pedido. Tente novamente!`
+            text: `Ocorreu um erro ao deletar um pedido. Tente novamente!`,
+            background: '#FFCC00',
+            color: '#eb7171',
+            confirmButtonColor: '#eb7171',
+            confirmButtonText: 'Ok'
         });
         return false;
     }
@@ -117,7 +121,11 @@ async function executarClique(clique) {
             text: "Você deseja realmente deletar este pedido?",
             showCancelButton: true,
             confirmButtonText: "Sim",
-            cancelButtonText: "Não"
+            cancelButtonText: "Não",
+            background: '#388E3C',
+            color: '#fcbe8a',
+            confirmButtonColor: '#fcbe8a',
+            cancelButtonColor: '#fcbe8a'
         });
 
         if (confirmar.isConfirmed) {
@@ -128,7 +136,11 @@ async function executarClique(clique) {
                 Swal.fire({
                     icon: "success",
                     title: "Sucesso!",
-                    text: "Pedido deletado com sucesso!"
+                    text: "Pedido deletado com sucesso!",
+                    background: '#B22222',
+                    color: '#a8dd8b',
+                    confirmButtonColor: '#a8dd8b',
+                    confirmButtonText: 'Ok'
                 }).then(function () {
                     window.location.reload();
                 });
@@ -137,7 +149,11 @@ async function executarClique(clique) {
             Swal.fire({
                 icon: "info",
                 title: "Cancelado",
-                text: "Deletamento interrompido"
+                text: "Deletamento interrompido",
+                background: '#B22222',
+                color: '#40c4ec',
+                confirmButtonColor: '#40c4ec',
+                confirmButtonText: 'Ok',
             });
         }
     }
@@ -183,7 +199,11 @@ async function executarClique(clique) {
             Swal.fire({
                 icon: "success",
                 title: "Sucesso!",
-                text: `Quantidade atualizada para ${novaQuantidade} com sucesso!`
+                text: `Quantidade atualizada para ${novaQuantidade} com sucesso!`,
+                background: '#B22222',
+                color: '#a8dd8b',
+                confirmButtonColor: '#a8dd8b',
+                confirmButtonText: 'Ok'
             });
 
             carregarPedidos();  // Atualiza a lista de pedidos
@@ -238,7 +258,11 @@ async function buscarPedidoPorNumero(id) {
         Swal.fire({
             icon: 'error',
             title: 'Erro!',
-            text: `Ocorreu um erro ao buscar o pedido. Tente novamente!`
+            text: `Ocorreu um erro ao buscar o pedido. Tente novamente!`,
+            background: '#FFCC00',
+            color: '#eb7171',
+            confirmButtonColor: '#eb7171',
+            confirmButtonText: 'Ok'
         });
         return null;
     }
@@ -255,7 +279,11 @@ document.getElementById("salvar-botao").addEventListener("click", async function
             Swal.fire({
                 icon: 'error',
                 title: 'Erro!',
-                text: 'Pedido não encontrado.'
+                text: 'Pedido não encontrado.',
+                background: '#FFCC00',
+                color: '#eb7171',
+                confirmButtonColor: '#eb7171',
+                confirmButtonText: 'Ok'
             });
             return;
         }
@@ -270,7 +298,11 @@ document.getElementById("salvar-botao").addEventListener("click", async function
         Swal.fire({
             icon: "success",
             title: "Sucesso!",
-            text: `Quantidade atualizada com sucesso!`
+            text: `Quantidade atualizada com sucesso!`,
+            background: '#B22222',
+            color: '#a8dd8b',
+            confirmButtonColor: '#a8dd8b',
+            confirmButtonText: 'Ok'
         });
 
         edicao.editarPedidos.style.display = "none";
@@ -304,7 +336,11 @@ async function finalizarPedidos() {
             Swal.fire({
                 icon: "info",
                 title: "Sem pedidos!",
-                text: "Não há pedidos para finalizar."
+                text: "Não há pedidos para finalizar.",
+                background: '#B22222',
+                color: '#40c4ec',
+                confirmButtonColor: '#40c4ec',
+                confirmButtonText: 'Ok',
             });
             return;
         }
@@ -315,7 +351,11 @@ async function finalizarPedidos() {
         Swal.fire({
             icon: "success",
             title: "Sucesso!",
-            text: "Você finalizou seu pedido, agora só esperar chegar"
+            text: "Você finalizou seu pedido, agora só esperar chegar",
+            background: '#B22222',
+            color: '#a8dd8b',
+            confirmButtonColor: '#a8dd8b',
+            confirmButtonText: 'Ok'
         }).then(function () {
             window.location.reload();
         });
@@ -336,7 +376,11 @@ document.addEventListener("click", async function (clique) {
             Swal.fire({
                 icon: "info",
                 title: "Nenhum pedido!",
-                text: "Não há pedidos para finalizar."
+                text: "Não há pedidos para finalizar.",
+                background: '#B22222',
+                color: '#40c4ec',
+                confirmButtonColor: '#40c4ec',
+                confirmButtonText: 'Ok',
             });
             return;
         }
@@ -346,7 +390,11 @@ document.addEventListener("click", async function (clique) {
             text: "Isso irá enviar seus pedidos. Deseja continuar?",
             showCancelButton: true,
             confirmButtonText: "Sim",
-            cancelButtonText: "Não"
+            cancelButtonText: "Não",
+            background: '#388E3C',
+            color: '#fcbe8a',
+            confirmButtonColor: '#fcbe8a',
+            cancelButtonColor: '#fcbe8a'
         });
         if (confirmar.isConfirmed) {
             await finalizarPedidos();

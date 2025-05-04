@@ -4,10 +4,16 @@
     max-width: 350px;
     margin: 0 auto;
     padding: 15px;
-    background-color: #fff8e1;
     border-radius: 10px;
-    border: 2px solid #ffc72c;
+    border: 5px solid #FFEB3B;
+    text-align: center;
 }
+
+#editar-pedidos-caixa,
+#finalizar-caixa {
+    background-color: #FFEB3B;
+}
+
 #listar-pedidos-caixa {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -16,6 +22,13 @@
     max-width: 1200px;
     width: 100%;
 }
+
+.mensagem {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #meusPedidos-caixa {
     margin: 200px auto 30px auto;
     padding: 20px;
@@ -27,7 +40,8 @@
 #finalizar-caixa {
     margin-bottom: 50px;
 }
-#finalizar-caixa{
+
+#finalizar-caixa {
     text-align: center;
 }
 
@@ -35,9 +49,8 @@
     width: 100%;
     padding: 15px;
     margin: 15px;
-    border: 2px solid #ffc72c;
     border-radius: 8px;
-    background-color: #ffe082;
+    background-color: #FFEB3B;
     font-size: 14px;
     text-align: center;
     transition: background-color 0.5s, transform 0.5s;
@@ -46,9 +59,9 @@
 }
 
 .pedido-renderizar:hover {
-    background-color: #ffd54f;
     transform: scale(1.02);
 }
+
 #finalizar-caixa strong,
 .pedido-renderizar strong {
     font-weight: 800;
@@ -56,10 +69,11 @@
     font-size: 16px;
     ;
 }
+
 #finalizar-caixa button,
 .pedido-renderizar button,
 #editar-pedidos-caixa button {
-    
+
     margin: 6px 8px 0px 0px;
     padding: 8px 16px;
     border-radius: 6px;
@@ -69,6 +83,7 @@
     transition: background-color 0.5s ease, transform 0.5s;
     display: inline-block;
 }
+
 #finalizar-caixa button:hover,
 .pedido-renderizar button:hover,
 #editar-pedidos-caixa button:hover {
@@ -76,23 +91,34 @@
 }
 
 .deletar-botao,
-#cancelar-botao {
-    background-color:  #e4002b;
-    color: #ffffff;
+#cancelar-botao,
+.pedido-renderizar .diminuir-quantidade {
+    background-color: #e4002b;
 }
 
 .deletar-botao:hover,
-#cancelar-botao:hover {
+#cancelar-botao:hover,
+.pedido-renderizar .diminuir-quantidade:hover {
     background-color: #9b002e;
 }
 
 .editar-botao,
-#salvar-botao {
-    background-color:  #ffc72c;
-    color: #212121;
+#salvar-botao,
+.pedido-renderizar .aumentar-quantidade {
+    background-color: green;
 }
 
 .editar-botao:hover,
-#salvar-botao:hover {
-    background-color: #e0a800;
+#salvar-botao,
+:hover .pedido-renderizar .aumentar-quantidade:hover {
+    background-color: rgb(2, 90, 2);
+}
+
+#editar-pedidos-caixa label {
+    text-align: left;
+}
+
+.pedido-renderizar h3 {
+    font-size: 25px;
+    color: #E53935;
 }

@@ -73,7 +73,11 @@ async function enviarPedido(indice) {
         Swal.fire({
             icon: 'error',
             title: 'Pedido já adicionado!',
-            text: 'Este item já está em Meus Pedidos.',
+            text: 'Você já possue esse pedido.',
+            background: '#FFCC00',
+            color: '#eb7171',
+            confirmButtonColor: '#eb7171',
+            confirmButtonText: 'Ok'
         });
         return;
     }
@@ -84,14 +88,22 @@ async function enviarPedido(indice) {
         Swal.fire({
             icon: 'success',
             title: 'Sucesso!',
-            text: `Pedido ${cardapio[indice].nome} adicionado`
+            text: `Pedido ${cardapio[indice].nome} adicionado`,
+            background: '#B22222',
+            color: '#a8dd8b',
+            confirmButtonColor: '#a8dd8b',
+            confirmButtonText: 'Ok'
         });
     } catch (error) {
         console.log("Erro ao adicionar um pedido", error)
         Swal.fire({
             icon: 'error',
             title: 'Erro!',
-            text: `Ocorreu um erro ao adicionar o seu pedido, tente novamente!`
+            text: `Ocorreu um erro ao adicionar o seu pedido, tente novamente!`,
+            background: '#FFCC00',
+            color: '#eb7171',
+            confirmButtonColor: '#eb7171',
+            confirmButtonText: 'Ok'
         });
     }
 }

@@ -7,8 +7,9 @@ html {
     justify-content: center;
     align-items: center;
 }
-body{
-    background: linear-gradient(90deg, #da291c, #ffc72c);
+
+body {
+    background: linear-gradient(90deg, #FFEB3B, #E53935);
 }
 
 label {
@@ -18,7 +19,7 @@ label {
 #menu-caixa {
     max-width: 1200px;
     border-radius: 25px;
-    background-color: #ffc72c;
+    background-color: #FFEB3B;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +31,7 @@ label {
     border-bottom-right-radius: 25px;
     border-top-right-radius: 25px;
     width: 60%;
-    background-color: #da291c
+    background-color: #E53935;
 }
 
 #textoLogar-caixa {
@@ -50,15 +51,39 @@ label {
     margin-bottom: 15px;
 }
 
-#inputCadastrar-caixa input,
-#textoLogar-caixa button {
+#inputCadastrar-caixa input {
     margin-bottom: 10px;
+
 }
 
 #textoLogar-caixa button {
     margin-top: 20px;
 }
-#inputCadastrar-caixa input{
+
+#inputCadastrar-caixa input {
     padding: 10px;
     border-radius: 10px;
+}
+
+#textoLogar-caixa a {
+    color: white;
+}
+
+#textoLogar-caixa button {
+    background-color: #C62828;
+    margin-bottom: 10px;
+}
+
+#inputCadastrar-caixa button {
+    background-color: #FFEB3B;
+    margin-bottom: 10px;
+}
+
+#textoLogar-caixa button:hover {
+    background-color: #A91F1F;
+}
+
+#inputCadastrar-caixa button:hover {
+    background-color: #E6B800;
+    margin-bottom: 10px;
 }

@@ -58,7 +58,11 @@ document.getElementById("btn-logar").addEventListener("click", function () {
         Swal.fire({
             icon: 'error',
             title: 'Erro!',
-            text: `Não dá para ter tudo ;(`
+            text: `Não dá para ter tudo ;(`,
+            background: '#FFCC00',
+            color: '#eb7171', 
+            confirmButtonColor: '#eb7171', 
+            confirmButtonText: 'Ok'
         })
     }
     catch (error) {

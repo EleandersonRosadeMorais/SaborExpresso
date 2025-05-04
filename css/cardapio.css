@@ -1,5 +1,5 @@
 .cardapio-container {
-    margin: 100px auto 30px auto;
+    margin: 2px auto 30px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
@@ -11,7 +11,6 @@
 .cardapioBloco {
     max-width: 350px;
     padding: 20px;
-    background-color: #fff8e1;
+    background-color:  #FFEB3B;
     border-radius: 10px;
-    border: 2px solid #ffc107;
 }
