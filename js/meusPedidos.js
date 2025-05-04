@@ -3,7 +3,7 @@ import { collection, getDocs, deleteDoc, doc, getDoc, setDoc } from "https://www
 
 // R - Read = Ler
 async function buscarPedidos() {
-    const colecao = await getDocs(collection(db, "teste"));
+    const colecao = await getDocs(collection(db, "pedidos"));
     const pedidos = [];
     for (const doc of colecao.docs) {
         pedidos.push({ id: doc.id, ...doc.data() });
@@ -92,7 +92,7 @@ function renderizarPedidos(pedidos) {
 // D - Delete = Deletar
 async function deletarPedido(numeroPedido) {
     try {
-        const deletarPedido = doc(db, "teste", numeroPedido);
+        const deletarPedido = doc(db, "pedidos", numeroPedido);
         await deleteDoc(deletarPedido);
         console.log("Pedido com ID" + numeroPedido + "foi excluído.");
         return true;
@@ -149,11 +149,11 @@ async function executarClique(clique) {
             const pedido = await buscarPedidoPorNumero(pedidoId);
             if (pedido) {
                 let novaQuantidade = pedido.quantidade - 1;
-                if (novaQuantidade < 1) {{novaQuantidade = 1; }}
+                if (novaQuantidade < 1) { { novaQuantidade = 1; } }
                 await atualizarQuantidade(pedidoId, novaQuantidade);
             }
         }
-    
+
         const botaoAdicionar = clique.target.closest(".aumentar-quantidade");
         if (botaoAdicionar) {
             const pedidoId = botaoAdicionar.dataset.id;
@@ -164,28 +164,28 @@ async function executarClique(clique) {
             }
         }
     });
-    
+
     async function atualizarQuantidade(pedidoId, novaQuantidade) {
         try {
-            const pedidoDoc = doc(db, "teste", pedidoId);
+            const pedidoDoc = doc(db, "pedidos", pedidoId);
             const pedidoAtual = await getDoc(pedidoDoc);
             if (!pedidoAtual.exists()) {
                 console.log("Pedido não encontrado");
                 return;
             }
-    
+
             const dadosAtualizados = {
                 ...pedidoAtual.data(),
                 quantidade: novaQuantidade
             };
-    
+
             await setDoc(pedidoDoc, dadosAtualizados);
             Swal.fire({
                 icon: "success",
                 title: "Sucesso!",
                 text: `Quantidade atualizada para ${novaQuantidade} com sucesso!`
             });
-    
+
             carregarPedidos();  // Atualiza a lista de pedidos
         } catch (erro) {
             console.log("Erro ao atualizar quantidade:", erro);
@@ -196,7 +196,7 @@ async function executarClique(clique) {
             });
         }
     }
-    
+
 
     const botaoEditar = clique.target.closest(".editar-botao");
     if (botaoEditar) {
@@ -224,7 +224,7 @@ function getValoresEditar() {
 
 async function buscarPedidoPorNumero(id) {
     try {
-        const pedidoDoc = doc(db, "teste", id);
+        const pedidoDoc = doc(db, "pedidos", id);
         const coletaPedido = await getDoc(pedidoDoc);
         if (coletaPedido.exists()) {
             return {
@@ -250,7 +250,7 @@ document.getElementById("salvar-botao").addEventListener("click", async function
     const novaQuantidade = parseInt(edicao.editarQuantidade.value);
 
     try {
-        const pedidoDoc = await getDoc(doc(db, "teste", id));
+        const pedidoDoc = await getDoc(doc(db, "pedidos", id));
         if (!pedidoDoc.exists()) {
             Swal.fire({
                 icon: 'error',
@@ -266,7 +266,7 @@ document.getElementById("salvar-botao").addEventListener("click", async function
             quantidade: novaQuantidade
         };
 
-        await setDoc(doc(db, "teste", id), dadosAtualizados);
+        await setDoc(doc(db, "pedidos", id), dadosAtualizados);
         Swal.fire({
             icon: "success",
             title: "Sucesso!",
@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", carregarPedidos);
 // Finalizar Pedido
 async function finalizarPedidos() {
     try {
-        const colecao = await getDocs(collection(db, "teste"));
+        const colecao = await getDocs(collection(db, "pedidos"));
         if (colecao.empty) {
             Swal.fire({
                 icon: "info",
@@ -309,7 +309,7 @@ async function finalizarPedidos() {
             return;
         }
         for (const pedido of colecao.docs) {
-            await deleteDoc(doc(db, "teste", pedido.id));
+            await deleteDoc(doc(db, "pedidos", pedido.id));
         }
         console.log("Banco de dados apagado com sucesso!");
         Swal.fire({
@@ -331,7 +331,7 @@ async function finalizarPedidos() {
 document.addEventListener("click", async function (clique) {
     const botaoFinalizar = clique.target.closest('#finalizar-botao');
     if (botaoFinalizar) {
-        const colecao = await getDocs(collection(db, "teste"));
+        const colecao = await getDocs(collection(db, "pedidos"));
         if (colecao.empty) {
             Swal.fire({
                 icon: "info",
