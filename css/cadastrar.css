@@ -1,0 +1,64 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background: linear-gradient(90deg, #da291c, #ffc72c);
+}
+
+label {
+    text-align: left;
+}
+
+#menu-caixa {
+    max-width: 1200px;
+    border-radius: 25px;
+    background-color: #ffc72c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inputCadastrar-caixa {
+    text-align: center;
+    padding: 30px;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 60%;
+    background-color: #da291c
+}
+
+#textoLogar-caixa {
+    text-align: center;
+    padding: 20px;
+    width: 40%;
+}
+
+#inputCadastrar-caixa h1,
+#textoLogar-caixa h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+#inputCadastrar-caixa p,
+#textoLogar-caixa p {
+    margin-bottom: 15px;
+}
+
+#inputCadastrar-caixa input,
+#textoLogar-caixa button {
+    margin-bottom: 10px;
+}
+
+#textoLogar-caixa button {
+    margin-top: 20px;
+}
+#inputCadastrar-caixa input{
+    padding: 10px;
+    border-radius: 10px;
+}

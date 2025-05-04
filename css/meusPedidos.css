@@ -1,0 +1,98 @@
+#meusPedidos-caixa,
+#editar-pedidos-caixa,
+#finalizar-caixa {
+    max-width: 350px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: #fff8e1;
+    border-radius: 10px;
+    border: 2px solid #ffc72c;
+}
+#listar-pedidos-caixa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+#meusPedidos-caixa {
+    margin: 200px auto 30px auto;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+#editar-pedidos-caixa,
+#finalizar-caixa {
+    margin-bottom: 50px;
+}
+#finalizar-caixa{
+    text-align: center;
+}
+
+.pedido-renderizar {
+    width: 100%;
+    padding: 15px;
+    margin: 15px;
+    border: 2px solid #ffc72c;
+    border-radius: 8px;
+    background-color: #ffe082;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.5s, transform 0.5s;
+    max-width: 350px;
+    max-width: 100%;
+}
+
+.pedido-renderizar:hover {
+    background-color: #ffd54f;
+    transform: scale(1.02);
+}
+#finalizar-caixa strong,
+.pedido-renderizar strong {
+    font-weight: 800;
+    color: #d32f2f;
+    font-size: 16px;
+    ;
+}
+#finalizar-caixa button,
+.pedido-renderizar button,
+#editar-pedidos-caixa button {
+    
+    margin: 6px 8px 0px 0px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    transition: background-color 0.5s ease, transform 0.5s;
+    display: inline-block;
+}
+#finalizar-caixa button:hover,
+.pedido-renderizar button:hover,
+#editar-pedidos-caixa button:hover {
+    transform: scale(1.1);
+}
+
+.deletar-botao,
+#cancelar-botao {
+    background-color:  #e4002b;
+    color: #ffffff;
+}
+
+.deletar-botao:hover,
+#cancelar-botao:hover {
+    background-color: #9b002e;
+}
+
+.editar-botao,
+#salvar-botao {
+    background-color:  #ffc72c;
+    color: #212121;
+}
+
+.editar-botao:hover,
+#salvar-botao:hover {
+    background-color: #e0a800;
+}

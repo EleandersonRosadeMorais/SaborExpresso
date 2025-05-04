@@ -1,0 +1,66 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background: linear-gradient(90deg, #ffc72c, #da291c);
+}
+label {
+    text-align: left;
+}
+
+#menu-caixa {
+    margin: auto auto;
+    max-width: 1200px;
+    margin: 20px;
+    border-radius: 25px;
+    background-color: #da291c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inputLogin-caixa {
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 60%;
+    background-color: #ffc72c;
+}
+
+#textoCadastro-caixa {
+    text-align: center;
+    padding: 20px;
+    width: 40%;
+}
+
+#inputLogin-caixa h1,
+#textoCadastro-caixa h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+#inputLogin-caixa p,
+#textoCadastro-caixa p {
+    margin-bottom: 15px;
+}
+
+#inputLogin-caixa input,
+#textoCadastro-caixa button {
+    margin-bottom: 10px;
+}
+
+#textoCadastro-caixa button {
+    margin-top: 20px;
+}
+
+#inputLogin-caixa input {
+    padding: 10px;
+    border-radius: 10px;
+}
