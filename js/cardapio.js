@@ -12,7 +12,7 @@ const cardapio = [
         nome: "Hambúrguer Artesanal",
         descricao: "Pão brioche com carne Angus",
         preco: 25.50,
-        quantidade: 2
+        quantidade: 1
     },
     {
         nome: "Salada Caesar",
@@ -30,13 +30,13 @@ const cardapio = [
         nome: "Strogonoff de Frango",
         descricao: "Acompanhado de arroz e batata palha",
         preco: 27.50,
-        quantidade: 2
+        quantidade: 1
     },
     {
         nome: "Panqueca de Carne",
         descricao: "Panqueca recheada com carne e molho vermelho",
         preco: 21.90,
-        quantidade: 2
+        quantidade: 1
     },
     {
         nome: "Risoto de Camarão",
@@ -48,12 +48,12 @@ const cardapio = [
         nome: "Feijoada Completa",
         descricao: "Feijão preto com carnes e acompanhamentos",
         preco: 31.50,
-        quantidade: 2
+        quantidade: 1
     },
     {
         nome: "Alaminuta",
         descricao: "Feijão, arroz, frango com verduras",
-        preco: 42.00,
+        preco: 38.00,
         quantidade: 1
     }
 ];
