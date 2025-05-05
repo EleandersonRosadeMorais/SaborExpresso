@@ -1,88 +1,88 @@
 body,
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-body{
-    background: linear-gradient(90deg, #FFEB3B,#E53935);
+body {
+  background: linear-gradient(90deg, #ffeb3b, #e53935);
 }
 label {
-    text-align: left;
+  text-align: left;
 }
 
 #menu-caixa {
-    margin: auto auto;
-    max-width: 1200px;
-    margin: 20px;
-    border-radius: 25px;
-    background-color: #E53935;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: auto auto;
+  max-width: 1200px;
+  margin: 20px;
+  border-radius: 25px;
+  background-color: #e53935;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #inputLogin-caixa {
-    text-align: center;
-    padding: 20px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    width: 60%;
-    background-color: #FFEB3B;
+  text-align: center;
+  padding: 20px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 60%;
+  background-color: #ffeb3b;
 }
 
 #textoCadastro-caixa {
-    text-align: center;
-    padding: 20px;
-    width: 40%;
+  text-align: center;
+  padding: 20px;
+  width: 40%;
 }
 
 #inputLogin-caixa h1,
 #textoCadastro-caixa h2 {
-    color: black;
-    margin-bottom: 10px;
+  color: black;
+  margin-bottom: 10px;
 }
 
 #inputLogin-caixa p,
 #textoCadastro-caixa p {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 #textoCadastro-caixa button {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 #inputLogin-caixa input {
-    padding: 10px;
-    border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #inputLogin-caixa button {
-    background-color: #C62828;
-    margin-bottom: 10px;
-    color: white;
+  background-color: #c62828;
+  margin-bottom: 10px;
+  color: white;
 }
 #inputLogin-caixa a button {
-    all: unset;
-    color: blue;
-    text-decoration: underline;
+  all: unset;
+  color: blue;
+  text-decoration: underline;
 }
 #inputLogin-caixa a button:hover {
-    all: unset;
-    cursor: pointer;
+  all: unset;
+  cursor: pointer;
 }
 #textoCadastro-caixa button {
-    background-color: #FFEB3B;
-    margin-bottom: 10px;
+  background-color: #ffeb3b;
+  margin-bottom: 10px;
 }
 
 #inputLogin-caixa button:hover {
-    background-color: #A91F1F;
+  background-color: #a91f1f;
 }
 
 #textoCadastro-caixa button:hover {
-    background-color: #E6B800;
+  background-color: #e6b800;
 }

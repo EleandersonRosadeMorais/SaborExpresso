@@ -1,44 +1,44 @@
 header {
-    background-color: #FFEB3B;
-    color: black;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: #ffeb3b;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 header h1 {
-    margin-bottom: 10px;
-    font-size: 32px;
+  margin-bottom: 10px;
+  font-size: 32px;
 }
 
 nav {
-    background-color: #FFEB3B;
-    padding: 10px;
+  background-color: #ffeb3b;
+  padding: 10px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 30px;
-    border: 1px solid #00000055;
-    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 30px;
+
+  transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease;
+  background-color: #e53935;
 }
 
 nav ul li a:hover {
-    background-color: #A91F1F;
-    color: #FFEB3B;
-    border: 1px solid #E53935;
+  background-color: #a91f1f;
+  color: #ffeb3b;
 }
