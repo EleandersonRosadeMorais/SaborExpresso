@@ -7,6 +7,7 @@
     border-radius: 10px;
     border: 5px solid #FFEB3B;
     text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 #editar-pedidos-caixa,
@@ -21,6 +22,7 @@
     padding: 20px;
     max-width: 1200px;
     width: 100%;
+    
 }
 
 .mensagem {
@@ -56,6 +58,7 @@
     transition: background-color 0.5s, transform 0.5s;
     max-width: 350px;
     max-width: 100%;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 .pedido-renderizar:hover {

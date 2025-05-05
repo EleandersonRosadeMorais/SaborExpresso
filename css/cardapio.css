@@ -11,6 +11,7 @@
 .cardapioBloco {
     max-width: 350px;
     padding: 20px;
-    background-color:  #FFEB3B;
+    background-color: #FFEB3B;
     border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }

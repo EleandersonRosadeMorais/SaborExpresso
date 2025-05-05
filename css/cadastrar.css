@@ -23,6 +23,7 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 #inputCadastrar-caixa {
@@ -32,12 +33,14 @@ label {
     border-top-right-radius: 25px;
     width: 60%;
     background-color: #E53935;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
 }
 
 #textoLogar-caixa {
     text-align: center;
     padding: 20px;
     width: 40%;
+
 }
 
 #inputCadastrar-caixa h1,
@@ -77,6 +80,7 @@ label {
 #inputCadastrar-caixa button {
     background-color: #FFEB3B;
     margin-bottom: 10px;
+    color: black;
 }
 
 #textoLogar-caixa button:hover {
